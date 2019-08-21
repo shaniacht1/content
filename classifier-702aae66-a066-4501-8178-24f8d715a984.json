@@ -1,0 +1,19 @@
+{
+	"brandName": "",
+	"custom": false,
+	"defaultIncidentType": "",
+	"id": "702aae66-a066-4501-8178-24f8d715a984",
+	"incidentSamples": null,
+	"instanceId": "12237a18-d037-4938-8f87-eca7cbc01355",
+	"instanceName": "",
+	"isDefault": false,
+	"keyTypeMap": null,
+	"mapping": null,
+	"sortValues": null,
+	"transformer": {
+		"complex": null,
+		"simple": ""
+	},
+	"unclassifiedCases": null,
+	"version": -1
+}
