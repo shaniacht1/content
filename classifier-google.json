@@ -10,7 +10,7 @@
 	"keyTypeMap": {},
 	"mapping": {
 		"Phishing": {
-			"dontMapEventToLabels": false,
+			"dontMapEventToLabels": true,
 			"internalMapping": {
 				"Email Body HTML": {
 					"complex": null,
@@ -21,15 +21,45 @@
 					"simple": "from"
 				},
 				"Test Field": {
-					"complex": null,
-					"simple": "html"
+					"complex": {
+						"accessor": "Subject",
+						"filters": [],
+						"root": "headers",
+						"transformers": [
+							{
+								"args": {
+									"prefix": {
+										"isContext": false,
+										"value": {
+											"complex": null,
+											"simple": "AAAAA"
+										}
+									},
+									"suffix": {
+										"isContext": false,
+										"value": {
+											"complex": null,
+											"simple": "AAAAA"
+										}
+									}
+								},
+								"operator": "concat"
+							}
+						]
+					},
+					"simple": ""
 				}
 			}
 		}
 	},
 	"sortValues": null,
 	"transformer": {
-		"complex": null,
+		"complex": {
+			"accessor": "",
+			"filters": [],
+			"root": "root",
+			"transformers": []
+		},
 		"simple": ""
 	},
 	"unclassifiedCases": {},
