@@ -50,6 +50,20 @@
 						]
 					},
 					"simple": ""
+				},
+				"name": {
+					"complex": {
+						"accessor": "",
+						"filters": [],
+						"root": "subject",
+						"transformers": [
+							{
+								"args": {},
+								"operator": "toUpperCase"
+							}
+						]
+					},
+					"simple": ""
 				}
 			}
 		}
