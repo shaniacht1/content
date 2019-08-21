@@ -1,6 +1,6 @@
 {
 	"brandName": "EWS v2",
-	"custom": false,
+	"custom": true,
 	"defaultIncidentType": "",
 	"id": "EWS v2",
 	"incidentSamples": null,
@@ -353,6 +353,10 @@
 						]
 					},
 					"simple": ""
+				},
+				"Test Field": {
+					"complex": null,
+					"simple": "message_id"
 				}
 			}
 		}
