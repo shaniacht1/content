@@ -7,7 +7,9 @@
 	"instanceId": "",
 	"instanceName": "",
 	"isDefault": true,
-	"keyTypeMap": {},
+	"keyTypeMap": {
+		"google": "Phishing"
+	},
 	"mapping": {
 		"Phishing": {
 			"dontMapEventToLabels": true,
@@ -54,13 +56,8 @@
 	},
 	"sortValues": null,
 	"transformer": {
-		"complex": {
-			"accessor": "",
-			"filters": [],
-			"root": "root",
-			"transformers": []
-		},
-		"simple": ""
+		"complex": null,
+		"simple": "brand"
 	},
 	"unclassifiedCases": {},
 	"version": -1
