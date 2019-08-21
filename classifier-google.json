@@ -1,0 +1,37 @@
+{
+	"brandName": "google",
+	"custom": true,
+	"defaultIncidentType": "",
+	"id": "google",
+	"incidentSamples": null,
+	"instanceId": "",
+	"instanceName": "",
+	"isDefault": true,
+	"keyTypeMap": {},
+	"mapping": {
+		"Phishing": {
+			"dontMapEventToLabels": false,
+			"internalMapping": {
+				"Email Body HTML": {
+					"complex": null,
+					"simple": "html"
+				},
+				"Email From": {
+					"complex": null,
+					"simple": "from"
+				},
+				"Test Field": {
+					"complex": null,
+					"simple": "html"
+				}
+			}
+		}
+	},
+	"sortValues": null,
+	"transformer": {
+		"complex": null,
+		"simple": ""
+	},
+	"unclassifiedCases": {},
+	"version": -1
+}
