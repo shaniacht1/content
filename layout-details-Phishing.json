@@ -1,0 +1,376 @@
+{
+	"id": "Phishing",
+	"kind": "details",
+	"name": "",
+	"sections": [
+		{
+			"description": "",
+			"fields": [
+				{
+					"fieldId": "incident_emailsubject",
+					"id": "",
+					"isVisible": true,
+					"modified": "0001-01-01T00:00:00Z",
+					"sortValues": null,
+					"version": 0
+				},
+				{
+					"fieldId": "incident_emailfrom",
+					"id": "",
+					"isVisible": true,
+					"modified": "0001-01-01T00:00:00Z",
+					"sortValues": null,
+					"version": 0
+				},
+				{
+					"fieldId": "incident_emailreturnpath",
+					"id": "",
+					"isVisible": true,
+					"modified": "0001-01-01T00:00:00Z",
+					"sortValues": null,
+					"version": 0
+				},
+				{
+					"fieldId": "incident_emailto",
+					"id": "",
+					"isVisible": true,
+					"modified": "0001-01-01T00:00:00Z",
+					"sortValues": null,
+					"version": 0
+				},
+				{
+					"fieldId": "incident_emailcc",
+					"id": "",
+					"isVisible": true,
+					"modified": "0001-01-01T00:00:00Z",
+					"sortValues": null,
+					"version": 0
+				},
+				{
+					"fieldId": "incident_emailbcc",
+					"id": "",
+					"isVisible": true,
+					"modified": "0001-01-01T00:00:00Z",
+					"sortValues": null,
+					"version": 0
+				},
+				{
+					"fieldId": "incident_emailtocount",
+					"id": "",
+					"isVisible": true,
+					"modified": "0001-01-01T00:00:00Z",
+					"sortValues": null,
+					"version": 0
+				},
+				{
+					"fieldId": "incident_emailsenderip",
+					"id": "",
+					"isVisible": true,
+					"modified": "0001-01-01T00:00:00Z",
+					"sortValues": null,
+					"version": 0
+				},
+				{
+					"fieldId": "incident_emailreplyto",
+					"id": "",
+					"isVisible": true,
+					"modified": "0001-01-01T00:00:00Z",
+					"sortValues": null,
+					"version": 0
+				},
+				{
+					"fieldId": "incident_emailmessageid",
+					"id": "",
+					"isVisible": true,
+					"modified": "0001-01-01T00:00:00Z",
+					"sortValues": null,
+					"version": 0
+				}
+			],
+			"id": "",
+			"isVisible": true,
+			"modified": "0001-01-01T00:00:00Z",
+			"name": "Email Properties",
+			"query": null,
+			"queryType": "",
+			"readOnly": false,
+			"sortValues": null,
+			"type": "",
+			"version": 0
+		},
+		{
+			"description": "",
+			"fields": [
+				{
+					"fieldId": "incident_type",
+					"id": "",
+					"isVisible": true,
+					"modified": "0001-01-01T00:00:00Z",
+					"sortValues": null,
+					"version": 0
+				},
+				{
+					"fieldId": "incident_severity",
+					"id": "",
+					"isVisible": true,
+					"modified": "0001-01-01T00:00:00Z",
+					"sortValues": null,
+					"version": 0
+				},
+				{
+					"fieldId": "incident_owner",
+					"id": "",
+					"isVisible": true,
+					"modified": "0001-01-01T00:00:00Z",
+					"sortValues": null,
+					"version": 0
+				},
+				{
+					"fieldId": "incident_dbotstatus",
+					"id": "",
+					"isVisible": true,
+					"modified": "0001-01-01T00:00:00Z",
+					"sortValues": null,
+					"version": 0
+				},
+				{
+					"fieldId": "incident_dbotsource",
+					"id": "",
+					"isVisible": true,
+					"modified": "0001-01-01T00:00:00Z",
+					"sortValues": null,
+					"version": 0
+				},
+				{
+					"fieldId": "incident_occurred",
+					"id": "",
+					"isVisible": true,
+					"modified": "0001-01-01T00:00:00Z",
+					"sortValues": null,
+					"version": 0
+				}
+			],
+			"id": "",
+			"isVisible": true,
+			"modified": "0001-01-01T00:00:00Z",
+			"name": "Case Management",
+			"query": null,
+			"queryType": "",
+			"readOnly": false,
+			"sortValues": null,
+			"type": "",
+			"version": 0
+		},
+		{
+			"description": "",
+			"fields": [
+				{
+					"fieldId": "incident_detectionsla",
+					"id": "",
+					"isVisible": true,
+					"modified": "0001-01-01T00:00:00Z",
+					"sortValues": null,
+					"version": 0
+				},
+				{
+					"fieldId": "incident_remediationsla",
+					"id": "",
+					"isVisible": true,
+					"modified": "0001-01-01T00:00:00Z",
+					"sortValues": null,
+					"version": 0
+				},
+				{
+					"fieldId": "incident_dbotduedate",
+					"id": "",
+					"isVisible": true,
+					"modified": "0001-01-01T00:00:00Z",
+					"sortValues": null,
+					"version": 0
+				}
+			],
+			"id": "",
+			"isVisible": true,
+			"modified": "0001-01-01T00:00:00Z",
+			"name": "SLA",
+			"query": null,
+			"queryType": "",
+			"readOnly": false,
+			"sortValues": null,
+			"type": "",
+			"version": 0
+		},
+		{
+			"description": "Email relevant Body fields",
+			"fields": [
+				{
+					"fieldId": "incident_emailbody",
+					"id": "",
+					"isVisible": true,
+					"modified": "0001-01-01T00:00:00Z",
+					"sortValues": null,
+					"version": 0
+				}
+			],
+			"id": "",
+			"isVisible": true,
+			"modified": "0001-01-01T00:00:00Z",
+			"name": "Email Body",
+			"query": null,
+			"queryType": "",
+			"readOnly": false,
+			"sortValues": null,
+			"type": "",
+			"version": 0
+		},
+		{
+			"description": "",
+			"id": "",
+			"isVisible": true,
+			"modified": "0001-01-01T00:00:00Z",
+			"name": "Email HTML Image",
+			"query": {
+				"tags": [
+					"email_html_image"
+				]
+			},
+			"queryType": "warRoomFilter",
+			"readOnly": true,
+			"sortValues": null,
+			"type": "invTimeline",
+			"version": 0
+		},
+		{
+			"description": "Email Attachments Files info",
+			"fields": [
+				{
+					"fieldId": "incident_attachmentname",
+					"id": "",
+					"isVisible": true,
+					"modified": "0001-01-01T00:00:00Z",
+					"sortValues": null,
+					"version": 0
+				},
+				{
+					"fieldId": "incident_attachment",
+					"id": "",
+					"isVisible": true,
+					"modified": "0001-01-01T00:00:00Z",
+					"sortValues": null,
+					"version": 0
+				},
+				{
+					"fieldId": "incident_attachmenthash",
+					"id": "",
+					"isVisible": true,
+					"modified": "0001-01-01T00:00:00Z",
+					"sortValues": null,
+					"version": 0
+				},
+				{
+					"fieldId": "incident_attachmentextension",
+					"id": "",
+					"isVisible": true,
+					"modified": "0001-01-01T00:00:00Z",
+					"sortValues": null,
+					"version": 0
+				},
+				{
+					"fieldId": "incident_attachmentsize",
+					"id": "",
+					"isVisible": true,
+					"modified": "0001-01-01T00:00:00Z",
+					"sortValues": null,
+					"version": 0
+				},
+				{
+					"fieldId": "incident_attachmenttype",
+					"id": "",
+					"isVisible": true,
+					"modified": "0001-01-01T00:00:00Z",
+					"sortValues": null,
+					"version": 0
+				}
+			],
+			"id": "",
+			"isVisible": true,
+			"modified": "0001-01-01T00:00:00Z",
+			"name": "Email Attachments",
+			"query": null,
+			"queryType": "",
+			"readOnly": false,
+			"sortValues": null,
+			"type": "",
+			"version": 0
+		},
+		{
+			"description": "",
+			"id": "",
+			"isVisible": true,
+			"modified": "0001-01-01T00:00:00Z",
+			"name": "Indicators",
+			"query": null,
+			"queryType": "input",
+			"readOnly": true,
+			"sortValues": null,
+			"type": "indicators",
+			"version": 0
+		},
+		{
+			"description": "",
+			"id": "",
+			"isVisible": true,
+			"modified": "0001-01-01T00:00:00Z",
+			"name": "Evidence",
+			"query": null,
+			"queryType": "",
+			"readOnly": true,
+			"sortValues": null,
+			"type": "evidence",
+			"version": 0
+		},
+		{
+			"description": "",
+			"id": "",
+			"isVisible": true,
+			"modified": "0001-01-01T00:00:00Z",
+			"name": "Notes",
+			"query": null,
+			"queryType": "",
+			"readOnly": true,
+			"sortValues": null,
+			"type": "notes",
+			"version": 0
+		},
+		{
+			"description": "",
+			"id": "",
+			"isVisible": true,
+			"modified": "0001-01-01T00:00:00Z",
+			"name": "Linked Incidents",
+			"query": null,
+			"queryType": "",
+			"readOnly": true,
+			"sortValues": null,
+			"type": "linkedIncidents",
+			"version": 0
+		},
+		{
+			"description": "",
+			"id": "",
+			"isVisible": true,
+			"modified": "0001-01-01T00:00:00Z",
+			"name": "Team",
+			"query": null,
+			"queryType": "",
+			"readOnly": true,
+			"sortValues": null,
+			"type": "team",
+			"version": 0
+		}
+	],
+	"sortValues": null,
+	"system": true,
+	"typeId": "Phishing",
+	"version": -1
+}

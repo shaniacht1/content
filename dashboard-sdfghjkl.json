@@ -1,0 +1,22 @@
+{
+	"fromDate": "0001-01-01T00:00:00Z",
+	"fromDateLicense": "0001-01-01T00:00:00Z",
+	"id": "25a5a57a-82f4-44e1-819b-9f5fa4c26506",
+	"isCommon": true,
+	"layout": [],
+	"name": "sdfghjkl",
+	"owner": "admin",
+	"period": {
+		"by": "",
+		"byFrom": "days",
+		"byTo": "",
+		"field": "",
+		"fromValue": 7,
+		"toValue": null
+	},
+	"shared": false,
+	"sortValues": null,
+	"system": false,
+	"toDate": "0001-01-01T00:00:00Z",
+	"version": -1
+}

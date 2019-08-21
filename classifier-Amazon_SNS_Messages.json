@@ -1,0 +1,41 @@
+{
+	"brandName": "Amazon SNS Messages",
+	"custom": true,
+	"defaultIncidentType": "",
+	"id": "Amazon SNS Messages",
+	"incidentSamples": null,
+	"instanceId": "",
+	"instanceName": "",
+	"isDefault": true,
+	"keyTypeMap": {
+		"tasks": "Access",
+		"tasks2": "Authentication",
+		"tasks3": "C2Communication"
+	},
+	"mapping": {
+		"Access": {
+			"dontMapEventToLabels": false,
+			"internalMapping": {
+				"App": {
+					"complex": null,
+					"simple": "widgetType"
+				},
+				"Dest": {
+					"complex": null,
+					"simple": "query"
+				},
+				"Dest NT Domain": {
+					"complex": null,
+					"simple": "name"
+				}
+			}
+		}
+	},
+	"sortValues": null,
+	"transformer": {
+		"complex": null,
+		"simple": "dataType"
+	},
+	"unclassifiedCases": {},
+	"version": -1
+}

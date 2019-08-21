@@ -1,0 +1,11 @@
+category: Authentication
+commonfields:
+  id: kuku
+  version: -1
+configuration: []
+display: kuku
+name: kuku
+script:
+  runonce: false
+  script: nananananananan
+  type: python

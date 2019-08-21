@@ -1,0 +1,696 @@
+category: Authentication
+commonfields:
+  id: GitHub
+  version: -1
+configuration:
+- defaultvalue: ""
+  display: Fetch incidents
+  name: isFetch
+  required: false
+  type: 8
+- defaultvalue: ""
+  display: API Token
+  name: token
+  required: true
+  type: 4
+- defaultvalue: ""
+  display: 'Username of the repository owner, for example: github.com/repos/{_owner_}/{repo}/issues'
+  name: user
+  required: false
+  type: 0
+- defaultvalue: ""
+  display: The name of the requested repository.
+  name: repository
+  required: false
+  type: 0
+- defaultvalue: "3"
+  display: First fetch timestamp, in days.
+  name: fetch_time
+  required: false
+  type: 0
+- defaultvalue: ""
+  display: Use system proxy settings.
+  name: proxy
+  required: false
+  type: 8
+- defaultvalue: "false"
+  display: Trust any certificate (not secure).
+  name: insecure
+  required: false
+  type: 8
+- defaultvalue: ""
+  display: Incident type
+  name: incidentType
+  required: false
+  type: 13
+description: Integration to GitHub API
+detaileddescription: "\nTo access the requested repository, you need to provide \nthe
+  username, repository name, and API key as parameters for the\nintegration.\n\nTo
+  generate your personal access token, visit:\nhttps://github.com/settings/tokens\n\nThe
+  integration supports the following workflows:\n- Create an issue\n- Update an issue\n-
+  Close an issue\n- List all issues\n- Search for specific issues\n- Get the download
+  count for each release in a repository\n"
+display: GitHub
+image: data:image/png;base64,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
+name: GitHub
+script:
+  commands:
+  - arguments:
+    - description: The title of the issue.
+      name: title
+      required: true
+    - description: The contents of the issue.
+      name: body
+    - description: Labels to associate with this issue.
+      isArray: true
+      name: labels
+    - description: Logins for Users to assign to this issue.
+      isArray: true
+      name: assignees
+    description: Creates an issue in GitHub.
+    name: GitHub-create-issue
+    outputs:
+    - contextPath: GitHub.Issue.ID
+      description: The ID of the created issue.
+      type: Number
+    - contextPath: GitHub.Issue.Repository
+      description: The repository of the created issue.
+      type: String
+    - contextPath: GitHub.Issue.Title
+      description: The title of the created issue.
+      type: String
+    - contextPath: GitHub.Issue.Body
+      description: The body of the created issue.
+      type: Unknown
+    - contextPath: GitHub.Issue.State
+      description: The state of the created issue.
+      type: String
+    - contextPath: GitHub.Issue.Labels
+      description: Labels applied to the issue.
+      type: String
+    - contextPath: GitHub.Issue.Assignees
+      description: Users assigned to this issue.
+      type: String
+    - contextPath: GitHub.Issue.Created_at
+      description: Date when the issue was created.
+      type: Date
+    - contextPath: GitHub.Issue.Updated_at
+      description: Date when the issue was last updated.
+      type: Date
+    - contextPath: GitHub.Issue.Closed_at
+      description: Date when the issue was closed.
+      type: Date
+    - contextPath: GitHub.Issue.Closed_by
+      description: User who closed the issue.
+      type: String
+  - arguments:
+    - description: The number of the issue to close.
+      name: ID
+      required: true
+    description: Closes an existing issue.
+    name: GitHub-close-issue
+    outputs:
+    - contextPath: GitHub.Issue.ID
+      description: The ID of the closed issue.
+      type: Number
+    - contextPath: GitHub.Issue.Repository
+      description: The repository of the closed issue.
+      type: String
+    - contextPath: GitHub.Issue.Title
+      description: The title of the closed issue
+      type: String
+    - contextPath: GitHub.Issue.Body
+      description: The body of the closed issue.
+      type: Unknown
+    - contextPath: GitHub.Issue.State
+      description: The state of the closed issue.
+      type: String
+    - contextPath: GitHub.Issue.Labels
+      description: Labels spplied to the issue.
+      type: String
+    - contextPath: GitHub.Issue.Assignees
+      description: Users assigned to the issue.
+      type: String
+    - contextPath: GitHub.Issue.Created_at
+      description: Date when the issue was created.
+      type: Date
+    - contextPath: GitHub.Issue.Updated_at
+      description: Date when the issue was last updated
+      type: Date
+    - contextPath: GitHub.Issue.Closed_at
+      description: Date when the issue was closed.
+      type: Date
+    - contextPath: GitHub.Issue.Closed_by
+      description: User who closed the issue.
+      type: String
+  - arguments:
+    - description: The number of the issue to update.
+      name: ID
+      required: true
+    - description: The title of the issue.
+      name: title
+    - description: The contents of the issue.
+      name: body
+    - description: State of the issue. Either open or closed.
+      name: state
+    - description: 'Labels to apply to this issue. Pass one or more Labels to replace
+        the set of Labels on this Issue. Send an empty array ([]) to clear all Labels
+        from the Issue. '
+      isArray: true
+      name: labels
+    - description: Logins for Users to assign to this issue. Pass one or more user
+        logins to replace the set of assignees on this Issue. Send an empty array
+        ([]) to clear all assignees from the Issue.
+      isArray: true
+      name: assignees
+    description: Updates the parameters of a specified issue.
+    name: GitHub-update-issue
+    outputs:
+    - contextPath: GitHub.Issue.ID
+      description: The ID of the updated issue.
+      type: Number
+    - contextPath: GitHub.Issue.Repository
+      description: The repository of the updated issue.
+      type: String
+    - contextPath: GitHub.Issue.Title
+      description: The title of the updated issue.
+      type: String
+    - contextPath: GitHub.Issue.Body
+      description: The body of the updated issue.
+      type: Unknown
+    - contextPath: GitHub.Issue.State
+      description: The state of the updated issue.
+      type: String
+    - contextPath: GitHub.Issue.Labels
+      description: Labels applied to the issue.
+      type: String
+    - contextPath: GitHub.Issue.Assignees
+      description: Users assigned to the issue.
+      type: String
+    - contextPath: GitHub.Issue.Created_at
+      description: Date when the issue was created.
+      type: Date
+    - contextPath: GitHub.Issue.Updated_at
+      description: Date when the issue was last updated.
+      type: Date
+    - contextPath: GitHub.Issue.Closed_at
+      description: Date when the issue was closed.
+      type: Date
+    - contextPath: GitHub.Issue.Closed_by
+      description: User who closed the issue.
+      type: String
+  - arguments:
+    - auto: PREDEFINED
+      defaultValue: open
+      description: The state of the issues to return. Can be 'open', 'closed' or 'all'.
+        Default is 'open'
+      name: state
+      predefined:
+      - open
+      - closed
+      - all
+      required: true
+    - defaultValue: "50"
+      description: The number of issues to return. Default is 50. Maximum is 200.
+      name: limit
+    description: Lists all issues that the user has access to view.
+    name: GitHub-list-all-issues
+    outputs:
+    - contextPath: GitHub.Issue.ID
+      description: The ID of the issue.
+      type: Number
+    - contextPath: GitHub.Issue.Repository
+      description: The repository of the issue.
+      type: String
+    - contextPath: GitHub.Issue.Title
+      description: The title of the issue.
+      type: String
+    - contextPath: GitHub.Issue.Body
+      description: The body of the issue.
+      type: Unknown
+    - contextPath: GitHub.Issue.State
+      description: The state of the issue.
+      type: String
+    - contextPath: GitHub.Issue.Labels
+      description: Labels applied to the issue.
+      type: String
+    - contextPath: GitHub.Issue.Assignees
+      description: Users assigned to the issue.
+      type: String
+    - contextPath: GitHub.Issue.Created_at
+      description: Date when the issue was created.
+      type: Date
+    - contextPath: GitHub.Issue.Updated_at
+      description: Date when the issue was last updated.
+      type: Date
+    - contextPath: GitHub.Issue.Closed_at
+      description: Date when the issue was closed.
+      type: Date
+    - contextPath: GitHub.Issue.Closed_by
+      description: User who closed the issue.
+      type: String
+  - arguments:
+    - description: The query line for the search. See the [GitHub documentation](https://help.github.com/en/articles/searching-issues-and-pull-requests)
+        for more information.
+      name: query
+      required: true
+    - defaultValue: "50"
+      description: The number of issues to return. Default is 50. Maximum is 200.
+      name: limit
+    description: Searches for and returns issues that match a given query.
+    name: GitHub-search-issues
+    outputs:
+    - contextPath: GitHub.Issue.ID
+      description: The ID of the issue.
+      type: Number
+    - contextPath: GitHub.Issue.Repository
+      description: The repository of the issue.
+      type: String
+    - contextPath: GitHub.Issue.Title
+      description: The title of the issue.
+      type: String
+    - contextPath: GitHub.Issue.Body
+      description: The body of the issue.
+      type: Unknown
+    - contextPath: GitHub.Issue.State
+      description: The state of the issue.
+      type: String
+    - contextPath: GitHub.Issue.Labels
+      description: Labels applied to the issue.
+      type: String
+    - contextPath: GitHub.Issue.Assignees
+      description: Users assigned to the issue.
+      type: String
+    - contextPath: GitHub.Issue.Created_at
+      description: Date when the issue was created.
+      type: Date
+    - contextPath: GitHub.Issue.Updated_at
+      description: Date when the issue was last updated.
+      type: Date
+    - contextPath: GitHub.Issue.Closed_at
+      description: Date when the issue was closed.
+      type: Date
+    - contextPath: GitHub.Issue.Closed_by
+      description: User who closed the issue.
+      type: String
+  - arguments: []
+    description: Returns the total number of downloads for all releases for the specified
+      repository.
+    name: GitHub-get-download-count
+    outputs:
+    - contextPath: GitHub.Release.ID
+      description: ID of the release.
+      type: Number
+    - contextPath: GitHub.Release.Download_count
+      description: Download count for the release.
+      type: Number
+    - contextPath: GitHub.Release.Name
+      description: Name of the release.
+      type: String
+    - contextPath: GitHub.Release.Body
+      description: Body of the release.
+      type: String
+    - contextPath: GitHub.Release.Created_at
+      description: Date when the release was created.
+      type: Date
+    - contextPath: GitHub.Release.Published_at
+      description: Date when the release was published.
+      type: Date
+  dockerimage: demisto/python3:3.7.3.286
+  isfetch: true
+  runonce: false
+  script: |2-
+
+
+
+    ''' IMPORTS '''
+
+    import json
+    import requests
+    from datetime import datetime, timedelta
+
+    # Disable insecure warnings
+    requests.packages.urllib3.disable_warnings()
+
+    ''' GLOBALS/PARAMS '''
+
+    USER = demisto.params().get('user')
+    TOKEN = demisto.params().get('token')
+    BASE_URL = 'https://api.github.com'
+    REPOSITORY = demisto.params().get('repository')
+    USE_SSL = not demisto.params().get('insecure', False)
+    FETCH_TIME = demisto.params().get('fetch_time', '30 days')
+
+    USER_SUFFIX = '/repos/{}/{}'.format(USER, REPOSITORY)
+    ISSUE_SUFFIX = USER_SUFFIX + '/issues'
+    RELEASE_SUFFIX = USER_SUFFIX + '/releases'
+
+    RELEASE_HEADERS = ['ID', 'Name', 'Download_count', 'Body', 'Created_at', 'Published_at']
+    ISSUE_HEADERS = ['ID', 'Repository', 'Title', 'State', 'Body', 'Created_at', 'Updated_at', 'Closed_at', 'Closed_by',
+                     'Assignees', 'Labels']
+
+    # Headers to be sent in requests
+    HEADERS = {
+        'Authorization': "Bearer " + TOKEN
+    }
+
+
+    ''' HELPER FUNCTIONS '''
+
+
+    def http_request(method, url_suffix, params=None, data=None):
+        res = requests.request(
+            method,
+            BASE_URL + url_suffix,
+            verify=USE_SSL,
+            params=params,
+            data=json.dumps(data),
+            headers=HEADERS
+        )
+        if res.status_code >= 400:
+            try:
+                json_res = res.json()
+
+                if json_res.get('errors') is None:
+                    return_error('Error in API call to the GitHub Integration [%d] - %s' % (res.status_code, res.reason))
+
+                else:
+                    error_code = json_res.get('errors')[0].get('code')
+                    if error_code == 'missing_field':
+                        return_error('Error: the field: "{}" requires a value'.format(json_res.get('errors')[0].get('field')))
+
+                    elif error_code == 'invalid':
+                        field = json_res.get('errors')[0].get('field')
+                        if field == 'q':
+                            return_error('Error: invalid query - {}'.format(json_res.get('errors')[0].get('message')))
+
+                        else:
+                            return_error('Error: the field: "{}" has an invalid value'.format(field))
+
+                    elif error_code == 'missing':
+                        return_error('Error: {} does not exist'.format(json_res.get('errors')[0].get('resource')))
+
+                    elif error_code == 'already_exists':
+                        return_error('Error: the field {} must be unique'.format(json_res.get('errors')[0].get('field')))
+
+                    else:
+                        return_error('Error in API call to the GitHub Integration [%d] - %s' % (res.status_code, res.reason))
+
+            except ValueError:
+                return_error('Error in API call to GitHub Integration [%d] - %s' % (res.status_code, res.reason))
+
+        try:
+            return res.json()
+
+        except Exception as excep:
+            return_error('Error in HTTP request - {}'.format(str(excep)))
+
+
+    def data_formatting(title, body, labels, assignees, state):
+        """This method creates a dictionary to be used as "data" field in an http request."""
+        data = {}
+        if title is not None:
+            data['title'] = title
+
+        if body is not None:
+            data['body'] = body
+
+        if state is not None:
+            data['state'] = state
+
+        if labels is not None:
+            data['labels'] = labels.split(',')
+
+        if assignees is not None:
+            data['assignees'] = assignees.split(',')
+
+        return data
+
+
+    def context_create_issue(response, issue):
+        """ Create GitHub.Issue EntryContext and results to be printed in Demisto.
+
+        Args:
+            response (dict): The raw HTTP response to be inserted to the 'Contents' field.
+            issue (dict or list): A dictionary or a list of dictionaries formatted for Demisto results.
+        """
+        ec = {
+            'GitHub.Issue(val.Repository == obj.Repository && val.ID == obj.ID)': issue
+        }
+        return_outputs(tableToMarkdown("Issues:", issue, headers=ISSUE_HEADERS, removeNull=True), ec, response)
+
+
+    def list_create(issue, list_name, element_name):
+        """ Creates a list if parameters exist in issue.
+
+        Args:
+            issue(dict): an issue from GitHub.
+            list_name (str): the name of the list in the issue.
+            element_name (str): the field name of the element in the list.
+
+        Returns:
+            The created list or None if it does not exist.
+        """
+        if issue.get(list_name) is not None:
+            return [element.get(element_name) for element in issue.get(list_name)]
+
+        else:
+            None
+
+
+    def issue_format(issue):
+        """ Create a dictionary with selected fields representing an issue in Demisto.
+
+        Args:
+            issue (dict): An HTTP response representing an issue, formatted as a dictionary
+
+        Returns:
+            (dict). representing an issue in Demisto.
+        """
+        closed_by = None
+        if issue.get('closed_by') is not None and issue.get('state') == 'closed':
+            closed_by = issue.get('closed_by').get('login')
+
+        form = {
+            'ID': issue.get('number'),
+            'Repository': REPOSITORY,
+            'Title': issue.get('title'),
+            'Body': issue.get('body'),
+            'State': issue.get('state'),
+            'Labels': list_create(issue, 'labels', 'name'),
+            'Assignees': list_create(issue, 'assignees', 'login'),
+            'Created_at': issue.get('created_at'),
+            'Updated_at': issue.get('updated_at'),
+            'Closed_at': issue.get('closed_at'),
+            'Closed_by': closed_by
+        }
+        return form
+
+
+    def create_issue_table(issue_list, response, limit):
+        """ Get an HTTP response and a list containing several issues, sends each issue to be reformatted.
+
+        Args:
+            issue_list(list): derived from the HTTP response
+            response (dict):A raw HTTP response sent for 'Contents' field in context
+
+        Returns:
+            The issues are sent to Demisto as a list.
+        """
+        issue_list.reverse()
+        issue_table = []
+        issue_count = 0
+        for issue in issue_list:
+            issue_table.append(issue_format(issue))
+            issue_count = issue_count + 1
+            if issue_count == limit:
+                break
+
+        context_create_issue(response, issue_table)
+
+
+    ''' REQUESTS FUNCTIONS '''
+
+
+    def create_issue(title, body, labels, assignees):
+        data = data_formatting(title=title,
+                               body=body,
+                               labels=labels,
+                               assignees=assignees,
+                               state=None)
+
+        response = http_request(method='POST',
+                                url_suffix=ISSUE_SUFFIX,
+                                data=data)
+        return response
+
+
+    def close_issue(id):
+        response = http_request(method='PATCH',
+                                url_suffix=ISSUE_SUFFIX + '/{}'.format(str(id)),
+                                data={'state': 'closed'})
+        return response
+
+
+    def update_issue(id, title, body, state, labels, assign):
+        data = data_formatting(title=title,
+                               body=body,
+                               labels=labels,
+                               assignees=assign,
+                               state=state)
+
+        response = http_request(method='PATCH',
+                                url_suffix=ISSUE_SUFFIX + '/{}'.format(str(id)),
+                                data=data)
+        return response
+
+
+    def list_all_issue(state):
+        params = {'state': state}
+        response = http_request(method='GET',
+                                url_suffix=ISSUE_SUFFIX,
+                                params=params)
+        return response
+
+
+    def search_issue(query):
+        response = http_request(method='GET',
+                                url_suffix='/search/issues',
+                                params={'q': query})
+        return response
+
+
+    def get_download_count():
+        response = http_request(method='GET',
+                                url_suffix=RELEASE_SUFFIX)
+
+        count_per_release = []
+        for release in response:
+            total_download_count = 0
+            for asset in release.get('assets', []):
+                total_download_count = total_download_count + asset['download_count']
+
+            release_info = {
+                'ID': release.get('id'),
+                'Download_count': total_download_count,
+                'Name': release.get('name'),
+                'Body': release.get('body'),
+                'Created_at': release.get('created_at'),
+                'Published_at': release.get('published_at')
+            }
+            count_per_release.append(release_info)
+
+        ec = {
+            'GitHub.Release( val.ID == obj.ID )': count_per_release
+        }
+        return_outputs(tableToMarkdown('Releases:', count_per_release, headers=RELEASE_HEADERS, removeNull=True), ec,
+                       response)
+
+
+    ''' COMMANDS MANAGER / SWITCH PANEL '''
+
+
+    def create_command():
+        args = demisto.args()
+        response = create_issue(args.get('title'), args.get('body'),
+                                args.get('labels'), args.get('assignees'))
+        issue = issue_format(response)
+        context_create_issue(response, issue)
+
+
+    def close_command():
+        id = demisto.args().get('ID')
+        response = close_issue(id)
+        issue = issue_format(response)
+        context_create_issue(response, issue)
+
+
+    def update_command():
+        args = demisto.args()
+        response = update_issue(args.get('ID'), args.get('title'), args.get('body'), args.get('state'),
+                                args.get('labels'), args.get('assignees'))
+        issue = issue_format(response)
+        context_create_issue(response, issue)
+
+
+    def list_all_command():
+        state = demisto.args().get('state')
+        limit = int(demisto.args().get('limit'))
+        if limit > 200:
+            limit = 200
+
+        response = list_all_issue(state)
+        create_issue_table(response, response, limit)
+
+
+    def search_command():
+        q = demisto.args().get('query')
+        limit = int(demisto.args().get('limit'))
+        if limit > 200:
+            limit = 200
+
+        response = search_issue(q)
+        create_issue_table(response['items'], response, limit)
+
+
+    def fetch_incidents_command():
+        last_run = demisto.getLastRun()
+        if last_run and 'start_time' in last_run:
+            start_time = datetime.strptime(last_run.get('start_time'), '%Y-%m-%dT%H:%M:%SZ')
+
+        else:
+            start_time = datetime.now() - timedelta(days=int(FETCH_TIME))
+
+        last_time = start_time
+        issue_list = http_request(method='GET',
+                                  url_suffix=ISSUE_SUFFIX,
+                                  params={'state': 'all'})
+
+        incidents = []
+        for issue in issue_list:
+            updated_at_str = issue.get('created_at')
+            updated_at = datetime.strptime(updated_at_str, '%Y-%m-%dT%H:%M:%SZ')
+            if updated_at > start_time:
+                inc = {
+                    'name': issue.get('url'),
+                    'occurred': updated_at_str,
+                    'rawJSON': json.dumps(issue)
+                }
+                incidents.append(inc)
+                if updated_at > last_time:
+                    last_time = updated_at
+
+        demisto.setLastRun({'start_time': datetime.strftime(last_time, '%Y-%m-%dT%H:%M:%SZ')})
+        demisto.incidents(incidents)
+
+
+    '''EXECUTION'''
+    handle_proxy()
+    LOG('command is %s' % (demisto.command(),))
+    try:
+        if demisto.command() == 'test-module':
+            issue_list = http_request(method='GET',
+                                      url_suffix=ISSUE_SUFFIX,
+                                      params={'state': 'all'})
+            demisto.results("ok")
+        elif demisto.command() == 'fetch-incidents':
+            fetch_incidents_command()
+        elif demisto.command() == 'GitHub-create-issue':
+            create_command()
+        elif demisto.command() == 'GitHub-close-issue':
+            close_command()
+        elif demisto.command() == 'GitHub-update-issue':
+            update_command()
+        elif demisto.command() == 'GitHub-list-all-issues':
+            list_all_command()
+        elif demisto.command() == 'GitHub-search-issues':
+            search_command()
+        elif demisto.command() == 'GitHub-get-download-count':
+            get_download_count()
+
+    except Exception as e:
+        LOG(str(e))
+        LOG.print_log()
+        raise
+  type: python
+system: true

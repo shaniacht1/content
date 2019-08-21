@@ -1,0 +1,22 @@
+{
+	"fromDate": "0001-01-01T00:00:00Z",
+	"fromDateLicense": "0001-01-01T00:00:00Z",
+	"id": "f4e7be91-b691-4d3c-8a5d-24f6119cb76c",
+	"isCommon": true,
+	"layout": [],
+	"name": "tset db",
+	"owner": "admin",
+	"period": {
+		"by": "",
+		"byFrom": "days",
+		"byTo": "",
+		"field": "",
+		"fromValue": 7,
+		"toValue": null
+	},
+	"shared": false,
+	"sortValues": null,
+	"system": false,
+	"toDate": "0001-01-01T00:00:00Z",
+	"version": -1
+}
