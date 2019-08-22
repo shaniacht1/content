@@ -1,0 +1,159 @@
+{
+	"fromDate": "0001-01-01T00:00:00Z",
+	"fromDateLicense": "0001-01-01T00:00:00Z",
+	"id": "a7215098-b190-489c-832a-b280e08a7e3d",
+	"isCommon": true,
+	"layout": [
+		{
+			"forceRange": false,
+			"h": 3,
+			"i": "aaf00560-c4cc-11e9-805e-a969861f2a2a",
+			"id": "aaf00560-c4cc-11e9-805e-a969861f2a2a",
+			"w": 4,
+			"widget": {
+				"category": "",
+				"commitMessage": "",
+				"dataType": "incidents",
+				"dateRange": {
+					"fromDate": "0001-01-01T00:00:00Z",
+					"fromDateLicense": "0001-01-01T00:00:00Z",
+					"period": {
+						"by": "",
+						"byFrom": "days",
+						"byTo": "",
+						"field": "",
+						"fromValue": 7,
+						"toValue": null
+					},
+					"toDate": "0001-01-01T00:00:00Z"
+				},
+				"id": "active-incidents-by-type",
+				"isPredefined": true,
+				"modified": "2019-08-21T13:52:27.686935182Z",
+				"name": "Active Incidents - Line chart",
+				"params": {
+					"groupBy": [
+						"occurred(d)",
+						"type"
+					]
+				},
+				"prevName": "Active Incidents - Line chart",
+				"query": "-category:job and -status:archived and -status:closed",
+				"shouldCommit": false,
+				"size": 0,
+				"sort": null,
+				"sortValues": null,
+				"vcShouldIgnore": false,
+				"version": 5,
+				"widgetType": "line"
+			},
+			"x": 0,
+			"y": 0
+		},
+		{
+			"forceRange": false,
+			"h": 2,
+			"i": "ab552fd0-c4cc-11e9-805e-a969861f2a2a",
+			"id": "ab552fd0-c4cc-11e9-805e-a969861f2a2a",
+			"w": 2,
+			"widget": {
+				"category": "",
+				"commitMessage": "",
+				"dataType": "incidents",
+				"dateRange": {
+					"fromDate": "0001-01-01T00:00:00Z",
+					"fromDateLicense": "0001-01-01T00:00:00Z",
+					"period": {
+						"by": "",
+						"byFrom": "days",
+						"byTo": "",
+						"field": "",
+						"fromValue": 7,
+						"toValue": null
+					},
+					"toDate": "0001-01-01T00:00:00Z"
+				},
+				"id": "active-incidents-by-severity",
+				"isPredefined": true,
+				"modified": "2019-08-21T13:52:27.679993393Z",
+				"name": "Active Incidents - Pie chart",
+				"params": {
+					"groupBy": [
+						"severity"
+					]
+				},
+				"prevName": "Active Incidents - Pie chart",
+				"query": "-category:job and -status:archived and -status:closed",
+				"shouldCommit": false,
+				"size": 0,
+				"sort": null,
+				"sortValues": null,
+				"vcShouldIgnore": false,
+				"version": 5,
+				"widgetType": "pie"
+			},
+			"x": 2,
+			"y": 3
+		},
+		{
+			"forceRange": false,
+			"h": 2,
+			"i": "abb81050-c4cc-11e9-805e-a969861f2a2a",
+			"id": "abb81050-c4cc-11e9-805e-a969861f2a2a",
+			"w": 2,
+			"widget": {
+				"category": "",
+				"commitMessage": "",
+				"dataType": "incidents",
+				"dateRange": {
+					"fromDate": "0001-01-01T00:00:00Z",
+					"fromDateLicense": "0001-01-01T00:00:00Z",
+					"period": {
+						"by": "",
+						"byFrom": "days",
+						"byTo": "",
+						"field": "",
+						"fromValue": 7,
+						"toValue": null
+					},
+					"toDate": "0001-01-01T00:00:00Z"
+				},
+				"id": "incidents-assigned-by-user",
+				"isPredefined": true,
+				"modified": "2019-08-21T13:52:27.703480156Z",
+				"name": "Active Incidents Assigned by User",
+				"params": {
+					"groupBy": [
+						"owner"
+					]
+				},
+				"prevName": "Active Incidents Assigned by User",
+				"query": "-category:job and -status:archived and -status:closed",
+				"shouldCommit": false,
+				"size": 0,
+				"sort": null,
+				"sortValues": null,
+				"vcShouldIgnore": false,
+				"version": 5,
+				"widgetType": "bar"
+			},
+			"x": 4,
+			"y": 0
+		}
+	],
+	"name": "testetst",
+	"owner": "admin",
+	"period": {
+		"by": "",
+		"byFrom": "days",
+		"byTo": "",
+		"field": "",
+		"fromValue": 7,
+		"toValue": null
+	},
+	"shared": false,
+	"sortValues": null,
+	"system": false,
+	"toDate": "0001-01-01T00:00:00Z",
+	"version": -1
+}

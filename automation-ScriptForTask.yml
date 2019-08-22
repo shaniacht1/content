@@ -1,0 +1,14 @@
+commonfields:
+  id: 583f128d-7c1f-4d40-8a88-bd3b4ef66b21
+  version: -1
+dockerimage: demisto/python3:3.7.4.977
+enabled: true
+name: ScriptForTask
+runas: DBotWeakRole
+runonce: false
+script: |
+  demisto.results({"Type": entryTypes["note"], "ContentsFormat": formats["text"], "Contents": "myData"})
+scripttarget: 0
+subtype: python3
+tags: []
+type: python

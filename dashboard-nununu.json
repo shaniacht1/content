@@ -1,0 +1,22 @@
+{
+	"fromDate": "0001-01-01T00:00:00Z",
+	"fromDateLicense": "0001-01-01T00:00:00Z",
+	"id": "ad4aeadc-fd52-46a4-890d-4b66e916c202",
+	"isCommon": true,
+	"layout": [],
+	"name": "nununu",
+	"owner": "admin",
+	"period": {
+		"by": "",
+		"byFrom": "days",
+		"byTo": "",
+		"field": "",
+		"fromValue": 7,
+		"toValue": null
+	},
+	"shared": false,
+	"sortValues": null,
+	"system": false,
+	"toDate": "0001-01-01T00:00:00Z",
+	"version": -1
+}

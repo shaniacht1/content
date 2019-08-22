@@ -1,6 +1,6 @@
 {
 	"associatedToAll": true,
-	"associatedTypes": null,
+	"associatedTypes": [],
 	"breachScript": "",
 	"caseInsensitive": true,
 	"cliName": "multuselectfortesting",
@@ -24,7 +24,8 @@
 	"script": "",
 	"selectValues": [
 		"value1",
-		"value2"
+		"value2",
+		"value3"
 	],
 	"sla": 0,
 	"sortValues": null,

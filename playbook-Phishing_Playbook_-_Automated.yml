@@ -116,86 +116,6 @@ tasks:
           "y": 690
         }
       }
-  "100":
-    id: "100"
-    ignoreworker: false
-    nexttasks:
-      '#none#':
-      - "23"
-    note: false
-    separatecontext: false
-    task:
-      brand: ""
-      id: 27922299-5a0b-4525-8465-7c2efd9503b5
-      iscommand: false
-      name: ""
-      playbookId: Detonate File - Generic
-      type: playbook
-      version: -1
-    taskid: 27922299-5a0b-4525-8465-7c2efd9503b5
-    timertriggers: []
-    type: playbook
-    view: |-
-      {
-        "position": {
-          "x": 480,
-          "y": 1535
-        }
-      }
-  "101":
-    id: "101"
-    ignoreworker: false
-    nexttasks:
-      '#none#':
-      - "63"
-    note: false
-    separatecontext: false
-    task:
-      brand: ""
-      id: 16dd2965-30b6-47dc-80bf-48f322e21e9c
-      iscommand: false
-      name: ""
-      playbookId: Hunt for bad IOCs
-      type: playbook
-      version: -1
-    taskid: 16dd2965-30b6-47dc-80bf-48f322e21e9c
-    timertriggers: []
-    type: playbook
-    view: |-
-      {
-        "position": {
-          "x": 480,
-          "y": 3925
-        }
-      }
-  "102":
-    id: "102"
-    ignoreworker: false
-    nexttasks:
-      '#none#':
-      - "55"
-    note: false
-    separatecontext: false
-    task:
-      brand: ""
-      description: |-
-        - Find all mailboxes containing the malicious email
-        - Delete the emails from mailboxes
-      id: c932dac2-0738-4b68-8c30-1b27aa0dcda8
-      iscommand: false
-      name: Search for the malicious email in other mailboxes
-      type: regular
-      version: -1
-    taskid: c932dac2-0738-4b68-8c30-1b27aa0dcda8
-    timertriggers: []
-    type: regular
-    view: |-
-      {
-        "position": {
-          "x": 612.5,
-          "y": 3575
-        }
-      }
   "13":
     id: "13"
     ignoreworker: false
@@ -929,6 +849,86 @@ tasks:
         "position": {
           "x": 592.5,
           "y": 340
+        }
+      }
+  "100":
+    id: "100"
+    ignoreworker: false
+    nexttasks:
+      '#none#':
+      - "23"
+    note: false
+    separatecontext: false
+    task:
+      brand: ""
+      id: 27922299-5a0b-4525-8465-7c2efd9503b5
+      iscommand: false
+      name: ""
+      playbookId: Detonate File - Generic
+      type: playbook
+      version: -1
+    taskid: 27922299-5a0b-4525-8465-7c2efd9503b5
+    timertriggers: []
+    type: playbook
+    view: |-
+      {
+        "position": {
+          "x": 480,
+          "y": 1535
+        }
+      }
+  "101":
+    id: "101"
+    ignoreworker: false
+    nexttasks:
+      '#none#':
+      - "63"
+    note: false
+    separatecontext: false
+    task:
+      brand: ""
+      id: 16dd2965-30b6-47dc-80bf-48f322e21e9c
+      iscommand: false
+      name: ""
+      playbookId: Hunt for bad IOCs
+      type: playbook
+      version: -1
+    taskid: 16dd2965-30b6-47dc-80bf-48f322e21e9c
+    timertriggers: []
+    type: playbook
+    view: |-
+      {
+        "position": {
+          "x": 480,
+          "y": 3925
+        }
+      }
+  "102":
+    id: "102"
+    ignoreworker: false
+    nexttasks:
+      '#none#':
+      - "55"
+    note: false
+    separatecontext: false
+    task:
+      brand: ""
+      description: |-
+        - Find all mailboxes containing the malicious email
+        - Delete the emails from mailboxes
+      id: c932dac2-0738-4b68-8c30-1b27aa0dcda8
+      iscommand: false
+      name: Search for the malicious email in other mailboxes
+      type: regular
+      version: -1
+    taskid: c932dac2-0738-4b68-8c30-1b27aa0dcda8
+    timertriggers: []
+    type: regular
+    view: |-
+      {
+        "position": {
+          "x": 612.5,
+          "y": 3575
         }
       }
 version: -1
