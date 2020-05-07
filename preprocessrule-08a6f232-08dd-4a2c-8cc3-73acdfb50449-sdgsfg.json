@@ -1,0 +1,117 @@
+{
+	"action": "dropAndUpdate",
+	"enabled": true,
+	"existingEventsFilters": [
+		[
+			{
+				"ignoreCase": false,
+				"left": {
+					"isContext": true,
+					"value": {
+						"complex": null,
+						"simple": "name"
+					}
+				},
+				"operator": "isIdenticalIncident",
+				"right": {
+					"isContext": true,
+					"value": {
+						"complex": null,
+						"simple": "${incident.name}"
+					}
+				},
+				"type": "shortText"
+			}
+		]
+	],
+	"fromServerVersion": "",
+	"id": "08a6f232-08dd-4a2c-8cc3-73acdfb50449",
+	"index": 0,
+	"itemVersion": "",
+	"linkTo": "newest",
+	"locked": false,
+	"name": "sdgsfg",
+	"newEventFilters": [
+		[
+			{
+				"ignoreCase": false,
+				"left": {
+					"isContext": true,
+					"value": {
+						"complex": null,
+						"simple": "name"
+					}
+				},
+				"operator": "isEqualString",
+				"right": {
+					"isContext": false,
+					"value": {
+						"complex": null,
+						"simple": "ewfewffwe"
+					}
+				},
+				"type": "shortText"
+			}
+		]
+	],
+	"packID": "",
+	"period": {
+		"by": "days",
+		"fromValue": 30
+	},
+	"propagationLabels": [
+		"all"
+	],
+	"readyExistingEventsFilters": [
+		[
+			{
+				"ignoreCase": false,
+				"left": {
+					"isContext": true,
+					"value": {
+						"complex": null,
+						"simple": "name"
+					}
+				},
+				"operator": "isIdenticalIncident",
+				"right": {
+					"isContext": true,
+					"value": {
+						"complex": null,
+						"simple": "${incident.name}"
+					}
+				},
+				"type": "shortText"
+			}
+		]
+	],
+	"readyNewEventFilters": [
+		[
+			{
+				"ignoreCase": false,
+				"left": {
+					"isContext": true,
+					"value": {
+						"complex": null,
+						"simple": "name"
+					}
+				},
+				"operator": "isEqualString",
+				"right": {
+					"isContext": false,
+					"value": {
+						"complex": null,
+						"simple": "ewfewffwe"
+					}
+				},
+				"type": "shortText"
+			}
+		]
+	],
+	"scriptName": "",
+	"searchClosed": true,
+	"sortValues": null,
+	"system": false,
+	"toServerVersion": "",
+	"version": -1
+}
