@@ -1,0 +1,29 @@
+{
+	"action": "drop",
+	"enabled": true,
+	"existingEventsFilters": [],
+	"fromServerVersion": "",
+	"id": "81c075d9-9f53-4644-8981-287565570245",
+	"index": 2,
+	"itemVersion": "",
+	"linkTo": "oldest",
+	"locked": false,
+	"name": "fff",
+	"newEventFilters": [],
+	"packID": "",
+	"period": {
+		"by": "days",
+		"fromValue": 30
+	},
+	"propagationLabels": [
+		"all"
+	],
+	"readyExistingEventsFilters": [],
+	"readyNewEventFilters": [],
+	"scriptName": "",
+	"searchClosed": false,
+	"sortValues": null,
+	"system": false,
+	"toServerVersion": "",
+	"version": -1
+}
