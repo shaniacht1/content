@@ -1,0 +1,29 @@
+{
+	"action": "drop",
+	"enabled": true,
+	"existingEventsFilters": [],
+	"fromServerVersion": "",
+	"id": "af5aa44b-fefb-461c-8799-9d38282e6493",
+	"index": 0,
+	"itemVersion": "",
+	"linkTo": "oldest",
+	"locked": false,
+	"name": "sfsdf",
+	"newEventFilters": [],
+	"packID": "",
+	"period": {
+		"by": "days",
+		"fromValue": 30
+	},
+	"propagationLabels": [
+		"all"
+	],
+	"readyExistingEventsFilters": [],
+	"readyNewEventFilters": [],
+	"scriptName": "",
+	"searchClosed": false,
+	"sortValues": null,
+	"system": false,
+	"toServerVersion": "",
+	"version": -1
+}
